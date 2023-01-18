@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="--module-path &quot;/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib&quot; " author="false" classpath="/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.graphics.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.base.jar:/home/user/snap/eclipse/66/amd64/plugins/org.eclipse.fx.ide.css.jfx8_3.8.0.202204150904.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.swing.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.controls.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx-swt.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.fxml.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.web.jar:/home/user/Info/openjfx-19_linux-x64_bin-sdk/javafx-sdk-19/lib/javafx.media.jar" destdir="doc" doctitle="Black Jack" nodeprecated="true" nodeprecatedlist="true" noindex="false" nonavbar="false" notree="false" source="17" sourcefiles="src/module-info.java" sourcepath="src" splitindex="true" use="true" version="false">
+            <link href="https://docs.oracle.com/en/java/javase/17/docs/api/"/>
+        </javadoc>
+    </target>
+</project>
