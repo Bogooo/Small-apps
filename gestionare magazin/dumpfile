@@ -1,0 +1,166 @@
+-- MySQL dump 10.13  Distrib 8.0.33, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: Tema3
+-- ------------------------------------------------------
+-- Server version	8.0.33-0ubuntu0.22.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Bills`
+--
+
+DROP TABLE IF EXISTS `Bills`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Bills` (
+  `id_order` int NOT NULL,
+  `id_client` int NOT NULL,
+  `id_product` int NOT NULL,
+  `total_price` float DEFAULT NULL,
+  `date_trans` varchar(255) DEFAULT NULL,
+  KEY `id_client` (`id_client`),
+  KEY `id_order` (`id_order`),
+  KEY `id_product` (`id_product`),
+  CONSTRAINT `Bills_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `Clients` (`id_client`),
+  CONSTRAINT `Bills_ibfk_2` FOREIGN KEY (`id_order`) REFERENCES `Orders` (`id_order`),
+  CONSTRAINT `Bills_ibfk_3` FOREIGN KEY (`id_product`) REFERENCES `Products` (`id_product`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Bills`
+--
+
+LOCK TABLES `Bills` WRITE;
+/*!40000 ALTER TABLE `Bills` DISABLE KEYS */;
+INSERT INTO `Bills` VALUES (1,1,1,125,'2023-05-16T22:59:57.781915654'),(1,1,1,150,'2023-05-16T23:00:04.537041521'),(1,1,1,175,'2023-05-16T23:00:15.716426270'),(1,1,4,8.6,'2023-05-16T23:01:44.396431466'),(1,1,7,13.6,'2023-05-16T23:01:58.455951936'),(2,1,8,14.4,'2023-05-16T23:02:09.062527979'),(2,1,9,14.4,'2023-05-16T23:02:13.231515605'),(3,6,3,79.98,'2023-05-16T23:03:02.832656522'),(3,6,7,6.8,'2023-05-16T23:03:12.225301785'),(4,4,11,87.5,'2023-05-16T23:03:27.893079611'),(4,4,13,16,'2023-05-16T23:04:08.971256403'),(5,7,14,11,'2023-05-16T23:04:42.306677532'),(6,3,10,15.6,'2023-05-16T23:04:53.731777132'),(6,3,6,23,'2023-05-16T23:04:58.944505577'),(7,6,13,128,'2023-05-16T23:05:07.682488780'),(7,6,2,28.5,'2023-05-16T23:05:19.955619826'),(7,6,5,15.8,'2023-05-16T23:05:44.685390382'),(1,1,4,17.2,'2023-05-16T23:08:13.608584044'),(8,7,6,23,'2023-05-16T23:10:26.429139440'),(5,7,3,79.98,'2023-05-18T19:24:45.647880001');
+/*!40000 ALTER TABLE `Bills` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Carts`
+--
+
+DROP TABLE IF EXISTS `Carts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Carts` (
+  `id_order` int NOT NULL,
+  `id_product` int NOT NULL,
+  `price_current` float DEFAULT NULL,
+  `items_number` int DEFAULT NULL,
+  PRIMARY KEY (`id_order`,`id_product`),
+  KEY `id_product` (`id_product`),
+  CONSTRAINT `Carts_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `Products` (`id_product`),
+  CONSTRAINT `Carts_ibfk_2` FOREIGN KEY (`id_order`) REFERENCES `Orders` (`id_order`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Carts`
+--
+
+LOCK TABLES `Carts` WRITE;
+/*!40000 ALTER TABLE `Carts` DISABLE KEYS */;
+INSERT INTO `Carts` VALUES (1,1,25,7),(1,4,8.6,2),(1,7,6.8,2),(2,8,7.2,2),(2,9,7.2,2),(3,3,39.99,2),(3,7,6.8,1),(4,11,12.5,7),(4,13,16,1),(5,3,39.99,2),(5,14,2.2,5),(6,6,23,1),(6,10,5.2,3),(7,2,28.5,1),(7,5,15.8,1),(7,13,16,8);
+/*!40000 ALTER TABLE `Carts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Clients`
+--
+
+DROP TABLE IF EXISTS `Clients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Clients` (
+  `id_client` int NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_client`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Clients`
+--
+
+LOCK TABLES `Clients` WRITE;
+/*!40000 ALTER TABLE `Clients` DISABLE KEYS */;
+INSERT INTO `Clients` VALUES (1,'Bogdan','bec@gmail.com'),(2,'Dragos','dci@gmail.com'),(3,'Alexandra','adc@gmail.com'),(4,'Vlad','lv@gmial.com'),(5,'Tudor','cdt@gmail.com'),(6,'Bianca','dba@gmail.com'),(7,'Elena','ei@gmail.com'),(8,'Daiana','cmd@gmail.com');
+/*!40000 ALTER TABLE `Clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Orders`
+--
+
+DROP TABLE IF EXISTS `Orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Orders` (
+  `id_client` int NOT NULL,
+  `id_order` int NOT NULL,
+  `total_price` float DEFAULT NULL,
+  PRIMARY KEY (`id_order`),
+  KEY `id_client` (`id_client`),
+  CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `Clients` (`id_client`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Orders`
+--
+
+LOCK TABLES `Orders` WRITE;
+/*!40000 ALTER TABLE `Orders` DISABLE KEYS */;
+INSERT INTO `Orders` VALUES (1,1,205.8),(1,2,28.8),(6,3,86.78),(4,4,103.5),(7,5,90.98),(3,6,38.6),(6,7,172.3),(7,8,0);
+/*!40000 ALTER TABLE `Orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Products`
+--
+
+DROP TABLE IF EXISTS `Products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Products` (
+  `id_product` int NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `stock` int DEFAULT NULL,
+  PRIMARY KEY (`id_product`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Products`
+--
+
+LOCK TABLES `Products` WRITE;
+/*!40000 ALTER TABLE `Products` DISABLE KEYS */;
+INSERT INTO `Products` VALUES (1,'Set Acrilic',25,2),(2,'Spray Acrilic',28.5,14),(3,'Acuarele',39.99,9),(4,'Panza mini',8.6,22),(5,'Panza mare',15.8,13),(6,'Bloc desen',23,8),(7,'Blat lemn',6.8,29),(8,'Marker rosu',7.2,78),(9,'Marker albastru',7.2,65),(10,'Creion grafic',5.2,97),(11,'Carbune',12.5,11),(12,'Creioane colorate',56.7,8),(13,'Pensula',16,26),(14,'Burete de prictura',2.2,93);
+/*!40000 ALTER TABLE `Products` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-05-18 19:42:10

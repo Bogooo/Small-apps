@@ -1,0 +1,128 @@
+@font-face {
+    font-family:'Satisfy';
+    src: url('../../resources/fonts/Satisfy-Regular.ttf');
+}
+
+.client_butt
+{
+    -fx-font-size: 20;
+    -fx-text-fill: #fd4d43;
+    -fx-border-color: #fd4d43;
+    -fx-border-width: 4;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.client_butt2
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #fd4d43;
+    -fx-border-color: #fd4d43;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.client_lab
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #fd4d43;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.client_tf{
+    -fx-font-size: 15;
+    -fx-text-fill: #fd4d43;
+    -fx-background-color: #ffecb3;
+}
+
+.list-view .list-cell{
+    -fx-font-size: 15;
+    -fx-text-fill: #fd4d43;
+    -fx-background-color: #ffecb3;
+}
+.list-view .list-cell:focused{
+    -fx-font-size:20;
+    -fx-text-fill: #973c7d;
+    -fx-background-color: #fdba02;
+}
+
+.list-view, .split-pane { -fx-background-insets: 0; -fx-padding: 0; }
+
+.product_butt
+{
+    -fx-font-size: 20;
+    -fx-text-fill: #fdba02;
+    -fx-border-color: #fdba02;
+    -fx-border-width: 4;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.product_butt2
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #fdba02;
+    -fx-border-color: #fdba02;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.product_lab
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #fdba02;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.product_tf{
+    -fx-font-size: 15;
+    -fx-text-fill: #fdba02;
+    -fx-background-color: #ffecb3;
+}
+
+
+
+.order_butt
+{
+    -fx-font-size: 20;
+    -fx-text-fill: #973c7d;
+    -fx-border-color: #973c7d;
+    -fx-border-width: 4;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+
+.order_butt2
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #973c7d;
+    -fx-border-color: #973c7d;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.order_lab
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #973c7d;
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+
+.order_tf{
+    -fx-font-size: 15;
+    -fx-text-fill: #973c7d;
+    -fx-background-color: #ffecb3;
+}
+
+.combo-box .text-field
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #973c7d;
+    -fx-background-color: #ffecb3;
+}
+
+

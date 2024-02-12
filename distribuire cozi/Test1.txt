@@ -1,0 +1,144 @@
+N= 4
+Q= 2
+tmaxSimulation= 60
+[tminArrival,tmaxArrival]= [2, 30]
+[tminService,tmaxService]= [2, 4]
+
+Time: 0
+Waiting clients: (3,3,4),(2,9,2),(4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 1
+Waiting clients: (3,3,4),(2,9,2),(4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 2
+Waiting clients: (3,3,4),(2,9,2),(4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 3
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: (3,3,4), 
+Queue2: 
+
+Time: 4
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: (3,3,3), 
+Queue2: 
+
+Time: 5
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: (3,3,2), 
+Queue2: 
+
+Time: 6
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: (3,3,1), 
+Queue2: 
+
+Time: 7
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 8
+Waiting clients: (2,9,2),(4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 9
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: (2,9,2), 
+Queue2: 
+
+Time: 10
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: (2,9,1), 
+Queue2: 
+
+Time: 11
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 12
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 13
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 14
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 15
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 16
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 17
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 18
+Waiting clients: (4,19,2),(1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 19
+Waiting clients: (1,23,3)
+Queue1: (4,19,2), 
+Queue2: 
+
+Time: 20
+Waiting clients: (1,23,3)
+Queue1: (4,19,1), 
+Queue2: 
+
+Time: 21
+Waiting clients: (1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 22
+Waiting clients: (1,23,3)
+Queue1: 
+Queue2: 
+
+Time: 23
+Waiting clients:
+Queue1: (1,23,3), 
+Queue2: 
+
+Time: 24
+Waiting clients:
+Queue1: (1,23,2), 
+Queue2: 
+
+Time: 25
+Waiting clients:
+Queue1: (1,23,1), 
+Queue2: 
+
+Time: 26
+Waiting clients:
+Queue1: 
+Queue2: 
+
+Peak hour: 3
+Avg service time: 2.75
+Avg waiting time: 0.0

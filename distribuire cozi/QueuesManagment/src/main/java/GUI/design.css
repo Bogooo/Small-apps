@@ -1,0 +1,69 @@
+.label
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #0085d0;
+}
+
+.button
+{
+    -fx-font-size: 15;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to top, #00a5ff, #2cb3fc);
+    -fx-border-color: #0e9cf8;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.text-field
+{
+    -fx-font-size: 15;
+    -fx-text-fill: #0085d0;
+    -fx-background-radius: 30;
+
+}
+
+#root
+{
+    -fx-background-color: linear-gradient(to top right, #BBDEFB, #9cb8ff);
+}
+
+#out_container
+{
+    -fx-background-color:linear-gradient(to top right, #23679d, #005ea9);
+    -fx-background-radius: 20;
+}
+
+.title {
+    -fx-text-fill: #00A5FFFF;
+    -fx-font-size: 20;
+    -fx-font-family: 'Helvetica';
+    -fx-font-weight: bold;
+}
+
+.outs
+{
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box .list-view .list-cell
+{
+    -fx-font-size: 15;
+    -fx-background-color: #0085d0;
+    -fx-text-fill: white;
+    -fx-border-radius: 15;
+}
+
+.combo-box
+{
+    -fx-border-radius: 20;
+}
+
+.combo-box .list-cell
+{
+    -fx-text-fill: #0085d0;
+}
+
+.list-view .list-cell:filled {
+    -fx-text-fill: #0085d0;
+    -fx-background-color: white;
+}
